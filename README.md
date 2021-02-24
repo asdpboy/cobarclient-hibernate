@@ -1,4 +1,4 @@
-cobarclient for hibernate
+cobar client for hibernate，cobar client默认是基于mybatis实现的轻量级分库框架，基于此实现了基于hibernate的版本
 ============
 
 
