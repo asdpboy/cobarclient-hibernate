@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.alibaba.cobar.client.entities.Offer" table="offers" lazy="false">
+		 <!--
+		<id name="id" column="id" type="long">
+	
+		</id>
+		 -->
+		<composite-id>
+			<key-property name="id" column="id" type="long"/>
+			<key-property name="memberId" column="memberId" type="string"/>
+		</composite-id>
+		
+		<property name="subject" column="subject" type="string"></property>
+		<property name="gmtUpdated" column="gmtUpdated" type="date"></property>
+		
+	</class>
+
+</hibernate-mapping>

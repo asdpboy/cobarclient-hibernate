@@ -1,0 +1,12 @@
+<rules>
+  <rule>
+    <methodName>com.alibaba.cobar.client.entities.User.save</methodName>
+    <shardingExpression><![CDATA[mod.apply(id)==1]]></shardingExpression>
+    <shards>partition1</shards>
+  </rule>
+  <rule>
+    <methodName>com.alibaba.cobar.client.entities.User.save</methodName>
+    <shardingExpression><![CDATA[mod.apply(id)==0]]></shardingExpression>
+    <shards>partition2</shards>
+  </rule>
+</rules>

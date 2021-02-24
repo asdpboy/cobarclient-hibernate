@@ -1,0 +1,12 @@
+<rules>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Depart</className>
+    <shardingExpression><![CDATA[username.startsWith("A")]]></shardingExpression>
+    <shards>partition1</shards>
+  </rule>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Depart</className>
+    <shardingExpression><![CDATA[username.startsWith("D")]]></shardingExpression>
+    <shards>partition2</shards>
+  </rule>
+</rules>

@@ -1,0 +1,35 @@
+1、where 条件解析  -> key id  done
+2、一个方法中涉及到1个主表操作，同时涉及多个关联表的操作，原则是关联表的数据路由规则与主表一致， 如何保证是同一个sessionFactory ？
+3、查询多个数据库的数据合并？尤其分页处理     done
+4、非hibernate操作的数据操作分库规则？
+5、全局Key id生成  done
+6、batch 事务处理
+7、DaoFactory类事务相关处理方法不能控制事务，如果当前匹配到p2_main数据源。
+
+
+注意事项：
+1、主表必须写在HQL第一位
+2、BaseDao中除了获取connection操作的JDBC方法
+	如：public boolean batchUpdateSQL(String sql, ArrayList<SQLPara> lstParams, boolean blnTran) 37
+	   public RowSet queryNativeSQL(String sql, SQLPara sqlPara, boolean blnTran) *
+	   queryNativeSQL2 *             							使用了queryNativeSQL
+	   batchUpdateMultiSQL 1 
+	   batchUpdateMultiSQLByCrtConn
+	   public boolean updateSQL(String sql, String[] strParams, boolean blnTran)
+	   public boolean updateSQL(final String sql, final String strParams, boolean blnTran)	
+	   updateSQLByCrtConn
+	   ResultParameter query  Line 843							 使用了queryNativeSQL和search
+	   query Line 982                                       	 使用了queryNativeSQL和search
+	等。。。
+	
+外还有自定义Hibernate HibernateCallback ，使用getHibernateTemplate().execute()方式
+	public Integer batchUpdate(final String Hql, final HashMap args)  
+	public List search(final int firstRow, final int maxRows, final String hql, final HashMap args)
+	findByNamedQuery   0
+	createSQLQuery
+	executeProcOutParam
+    executeProcQuery
+    executeProc
+    
+    http://www.cnblogs.com/aigongsi/p/3152419.html
+    http://blog.sina.com.cn/s/blog_4ae2ef25010008ai.html

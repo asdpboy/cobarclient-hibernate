@@ -1,0 +1,6 @@
+<rules>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Depart</className>
+    <shardingExpression>id&gt;10000 and id&lt; 20000</shardingExpression>
+  </rule>
+</rules>

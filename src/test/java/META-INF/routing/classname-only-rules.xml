@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "rules.dtd">
+<rules>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Depart</className>
+    <shards>partition2</shards>
+  </rule>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Role</className>
+    <shards>partition1</shards>
+  </rule>
+    <rule>
+    <className>com.alibaba.cobar.client.entities.Offer</className>
+    <shards>partition1</shards>
+  </rule>
+</rules>

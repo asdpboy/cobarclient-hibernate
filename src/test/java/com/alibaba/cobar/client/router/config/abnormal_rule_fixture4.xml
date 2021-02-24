@@ -1,0 +1,8 @@
+<rules>
+  <rule>
+    <className>com.alibaba.cobar.client.entities.Depart</className>
+    <methodName>com.alibaba.cobar.client.entities.Depart.save</methodName>
+    <shardingExpressionx>id&gt;10000 and id&lt; 20000</shardingExpressionx>
+    <shard>p1, p2</shard>
+  </rule>
+</rules>

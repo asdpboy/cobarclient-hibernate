@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CobarTestSuite-Sequencial-Execution-Tests" verbose="2">
+	<test name="CobarHibernateTemplateWithComposedRuleRouterTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateDaoSupportTestWithComposedRuleRouter"></class>
+		</classes>
+	</test>
+	<test name="CobarHibernateTemplateWithClassNameRouterTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateTemplateWithClassNameRouterTest"></class>
+		</classes>
+	</test>
+	<test name="CobarHibernateTemplateWithClassNameShardingRouterTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateTemplateWithClassNameShardingRouterTest"></class>
+		</classes>
+	</test>
+	<test name="obarHibernateTemplateWithMethodOnlyRouterTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateTemplateWithMethodOnlyRouterTest"></class>
+		</classes>
+	</test>
+	<test name="obarHibernateTemplateWithMethodShardingRouterTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateTemplateWithMethodShardingRouterTest"></class>
+		</classes>
+	</test>
+	<test name="MultipleDataSourcesTransactionManagerTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.transaction.MultipleDataSourcesTransactionManagerTest"></class>
+		</classes>
+	</test>
+	<test name="CobarHibernateTemplateWithCustomMergerTest">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateTemplateWithCustomMergerTest"></class>
+		</classes>
+	</test>
+	<test name="CobarSqlMapClientDaoSupportTestWithComposedRuleRouter">
+		<classes>
+			<class name="com.alibaba.cobar.client.CobarHibernateDaoSupportTestWithComposedRuleRouter"></class>
+		</classes>
+	</test>
+</suite>
